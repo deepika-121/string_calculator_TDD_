@@ -13,4 +13,12 @@ RSpec.describe StringCalculator do
   it "returns the number for a single number string" do
     expect(@calculator.add("1")).to eq(1)
   end
+
+  it "returns the sum for two numbers comma delimited" do
+    expect(@calculator.add("1,2")).to eq(3)
+  end
+
+  it "returns the sum for multiple numbers comma delimited" do
+    expect(@calculator.add("1,2,3")).to eq(6)
+  end
 end
